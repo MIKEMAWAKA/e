@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <!-- basic -->
-        <meta charset="utf-8">
+
+
+<!-- Mirrored from template.hasthemes.com/hmart/hmart/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 20 Mar 2022 10:36:25 GMT -->
+<head>
+  <!-- basic -->
+  <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- mobile metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,562 +15,298 @@
         <meta name="keywords" content="">
         <meta name="description" content="">
         <meta name="author" content="">
-        <!-- bootstrap css -->
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
-        <!-- style css -->
-    
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
-        <!-- Responsive-->
-        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
-        <!-- fevicon -->
-        <link rel="icon" href="images/fevicon.png" type="image/gif" />
-        <!-- Scrollbar Custom CSS -->
-        <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}" />
+    <!-- CSS
+    ============================================ -->
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font.awesome.css" />
+    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/venobox.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css"> -->
+    <!-- Style CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <!-- Minify Version -->
+    <link rel="stylesheet" href="{{ asset('css/css/plugins.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/css/style.min.css') }}" />
   
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+</head>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
-        <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.cs') }}" />
-    
-        <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}" /> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-
-        <style>
-            ul{
-                padding: 0;
-                list-style: none;
-                
-            }
-            ul li{
-                display: inline-block;
-                position: relative;
-                line-height: 21px;
-                text-align: left;
-            }
-            ul li a{
-                display: block;
-                padding: 8px 25px;
-               
-                text-decoration: none;
-            }
-            ul li a:hover{
-                color: rgb(216, 46, 46);
-               
-            }
-            ul li ul.dropdown{
-                min-width: 100%; /* Set width of the dropdown */
-                background: #f00c0c;
-                display: none;
-                position: absolute;
-                z-index: 999;
-                left: 0;
-            }
-            ul li:hover ul.dropdown{
-                display: block; /* Display the dropdown */
-            }
-            ul li ul.dropdown li{
-                display: block;
-            }
-        </style>
-      
-    </head>
-
-   
-
-  
-<body class="main-layout ">
-  
-    <div class="loader_bg">
-        <div class="loader"><img src="{{ asset('images/loading.gif') }}" alt="#" /></div>
-    </div>
-    <!-- end loader -->
-    <!-- header -->
-    <header>
-        <!-- header inner -->
-        <div class="header">
-
-            <div class="container" id="section1" >
-                <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                        <div class="full">
-                            <div class="center-desk">
-                                <div class="logo" style="color: red;  font-size: 30px; height:90px; width:200px; font-weight: bold;margin-right:70px;" >
-                                    {{--  IPHOSAM TZ  --}}
-                                    <a href="index.html"><img src="images/lokk.png" h alt="#"></a>
-                                </div>
+<body>
+    <div class="main-wrapper">
+        <header>
+            <!-- Header top area start -->
+            <div class="header-top" style="color:white">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col">
+                            <div class="welcome-text">
+                                <p>Tanzania ,Dar es salaam,Sky city shopping mall</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                        <div class="menu-area">
-                            <div class="limit-box">
-                                <nav class="main-menu">
-                                    <ul class="menu-area-main">
-                                        <li class="active"> <a href="#section1">Home</a> </li>
-                                        <li >
-                                             <a href="#section2">Mobile App</a> 
-                                             <ul class="dropdown">
-                                                @foreach ($subcategory as $product)
-                                                <li><a href="#">{{ $product->name }}</a></li>
-                                                @endforeach
-                                           
-                                               
-                                            </ul>
-
-                                        </li>
-                                        <li><a href="#section3">Home Apliance</a></li>
-                                        <li><a href="#section4">Accessories</a></li>
-                                        <li> <a href="#section2">About</a> </li>
-                                        <li><a href="#section3">Brand</a></li>
-                                        <li><a href="#section4">Specials</a></li>
-                                        <li><a href="#section5">Contact Us</a></li>
-                                      
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 offset-md-6">
-                        <div class="location_icon_bottum">
-                            <ul>
-
-                                {{-- <span>Dar es Salaaam, Tanzania.</span>
-                                <p>+255783025855
-                                    <br>leopordk@lokkgroup.co.tz</p> --}}
-
-                                <li><img src="icon/call.png" />+255783025855</li>
-                                <li><img src="icon/email.png" />leopordk@lokkgroup.co.tz</li>
-                                <li><img src="icon/loc.png" />Location</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end header inner -->
-    </header>
-    <!-- end header -->
-    <section class="slider_section" >
-        <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="first-slide" src="images/banner.jpg" alt="First slide">
-                    <div class="container">
-                        <div class="carousel-caption relative">
-                            <span>All New Phones </span>
-                            <h1>up to 25% Flat Sale</h1>
-                            <p>It is a long established fact that a reader will be distracted by the readable content
-                                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-                            <a class="buynow" href="#">Buy Now</a>
-                            <ul class="social_icon">
-                                <li> <a href="https://www.facebook.com/Iphosam-107493748244341/"><i class="fa fa-facebook-f"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li> <a href="https://www.instagram.com/iphosam_tz/?hl=en"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="second-slide" src="images/banner.jpg" alt="Second slide">
-                    <div class="container">
-                        <div class="carousel-caption relative">
-                            <span>All New Phones </span>
-                            <h1>up to 25% Flat Sale</h1>
-                            <p>It is a long established fact that a reader will be distracted by the readable content
-                                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-                            <a class="buynow" href="#">Buy Now</a>
-                            <ul class="social_icon">
-                                <li> <a href="https://www.facebook.com/Iphosam-107493748244341/"><i class="fa fa-facebook-f"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li> <a href="https://www.instagram.com/iphosam_tz/?hl=en"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="third-slide" src="images/banner.jpg" alt="Third slide">
-                    <div class="container">
-                        <div class="carousel-caption relative">
-                            <span>All New Phones </span>
-                            <h1>up to 25% Flat Sale</h1>
-                            <p>It is a long established fact that a reader will be distracted by the readable content
-                                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-                            <a class="buynow" href="#">Buy Now</a>
-                            <ul class="social_icon">
-                                <li> <a href="https://www.facebook.com/Iphosam-107493748244341/"><i class="fa fa-facebook-f"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li> <a href="https://www.instagram.com/iphosam_tz/?hl=en"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                <i class='fa fa-angle-left'></i>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                <i class='fa fa-angle-right'></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- about -->
-    <div class="about">
-        <div class="container" id="section2">
-            <div class="row">
-                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
-                    <div class="about_img">
-                        <figure><img src="images/about.png" alt="img" /></figure>
-                    </div>
-                </div>
-                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
-                    <div class="about_box">
-                        <h3>About Us</h3>
-                        <span>Our Mobile Shop</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of It is a long established fact that a reader will be distracted by the </p>
-
-                    </div>
-               
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- end about -->
-
-    <!-- brand -->
-    <div class="brand" id="section3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>Mobile Phones</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="brand-bg">
-            <div class="container">
-                <div class="row">
-
-                    @foreach ($products as $product)
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img  src="{{ asset('upload/images/product/'.$product->productimages[0]->name) }}" alt="img">
-                            {{-- <img src="images/1.png" alt="img" /> --}}
-                            <h3>TSh <strong class="red">{{ $product->sale_price}}</strong></h3>
-                            <span>{{ $product->name }}</span>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                        </div>
-                    </div>
-                    @endforeach
-
-                    </div>
-                    <div class="col-md-12">
-                        <a class="read-more">See More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- end brand -->
-
-
-    <div class="brand" id="section3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>Home Appliance</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="brand-bg">
-            <div class="container">
-                <div class="row">
-
-                    @foreach ($productshome as $product)
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img  src="{{ asset('upload/images/product/'.$product->productimages[0]->name) }}" alt="img">
-                            {{-- <img src="images/1.png" alt="img" /> --}}
-                            <h3>TSh <strong class="red">{{ $product->sale_price}}</strong></h3>
-                            <span>{{ $product->name }}</span>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                        </div>
-                    </div>
-                    @endforeach
-
-                    </div>
-                    <div class="col-md-12">
-                        <a class="read-more">See More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="brand" id="section3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>Accessories</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="brand-bg">
-            <div class="container">
-                <div class="row">
-
-                    @foreach ($productsacces as $product)
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img  src="{{ asset('upload/images/product/'.$product->productimages[0]->name) }}" alt="img">
-                            {{-- <img src="images/1.png" alt="img" /> --}}
-                            <h3>TSh <strong class="red">{{ $product->sale_price}}</strong></h3>
-                            <span>{{ $product->name }}</span>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                            <i><img src="images/star.png"/></i>
-                        </div>
-                    </div>
-                    @endforeach
-
-                    </div>
-                    <div class="col-md-12">
-                        <a class="read-more">See More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- end brand -->
-
-    <!-- clients -->
-    <div class="clients" id="section4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>what say our clients</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="clients_red">
-        <div class="container">
-            <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ul class="carousel-indicators">
-                    <li data-target="#testimonial_slider" data-slide-to="0" class=""></li>
-                    <li data-target="#testimonial_slider" data-slide-to="1" class="active"></li>
-                    <li data-target="#testimonial_slider" data-slide-to="2" class=""></li>
-                </ul>
-                <!-- The slideshow -->
-                <div class="carousel-inner">
-                    <div class="carousel-item">
-                        <div class="testomonial_section">
-                            <div class="full center">
-                            </div>
-                            <div class="full testimonial_cont text_align_center cross_layout">
-                                <div class="cross_inner">
-                                    <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
-                                    </p>
-                                    <div class="full text_align_center margin_top_30">
-                                        <img src="icon/testimonial_qoute.png">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item active">
-
-                        <div class="testomonial_section">
-                            <div class="full center">
-                            </div>
-                            <div class="full testimonial_cont text_align_center cross_layout">
-                                <div class="cross_inner">
-                                    <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
-                                    </p>
-                                    <div class="full text_align_center margin_top_30">
-                                        <img src="icon/testimonial_qoute.png">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-item">
-
-                        <div class="testomonial_section">
-                            <div class="full center">
-                            </div>
-                            <div class="full testimonial_cont text_align_center cross_layout">
-                                <div class="cross_inner">
-                                    <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
-                                    </p>
-                                    <div class="full text_align_center margin_top_30">
-                                        <img src="icon/testimonial_qoute.png">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-    <!-- end clients -->
-    <!-- contact -->
-    <div class="contact"  id="section5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>Contact us</h2>
-                    </div>
-                    <form class="main_form">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                <input class="form-control" placeholder="Your name" type="text" name="Your Name">
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                <input class="form-control" placeholder="Email" type="text" name="Email">
-                            </div>
-                            <div class=" col-md-12">
-                                <input class="form-control" placeholder="Phone" type="text" name="Phone">
-                            </div>
-                            <div class="col-md-12">
-                                <textarea class="textarea" placeholder="Message"></textarea>
-                            </div>
-                            <div class=" col-md-12">
-                                <button class="send">Send</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end contact -->
-
-    <!-- footer -->
-    <footer>
-        <div id="contact" class="footer">
-            <div class="container">
-                <div class="row pdn-top-30">
-                    <div class="col-md-12 ">
-                        <div class="footer-box">
-                            <div class="headinga">
-                                <h3>Address</h3>
-                                <span>Dar es Salaaam, Tanzania.</span>
-                                <p>+255783025855
-                                    <br>leopordk@lokkgroup.co.tz</p>
-                            </div>
-                            <ul class="location_icon">
-                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-
-                            </ul>
-                            <div class="menu-bottom">
-                                <ul class="link">
-
-                                    <li class="active"> <a href="#section1">Home</a> </li>
-                                    <li> <a href="#section2">About</a> </li>
-                                    <li><a href="#section3">Brand</a></li>
-                                    <li><a href="#section4">Specials</a></li>
-                                    <li><a href="#section5">Contact Us</a></li>
-
-                                    {{-- <li> <a href="#">Home</a></li>
-                                    <li> <a href="#">About</a></li>
-                                    
-                                    <li> <a href="#">Brand </a></li>
-                                    <li> <a href="#">Specials  </a></li>
-                                    <li> <a href="#"> Contact us</a></li> --}}
+                        <div class="col d-none d-lg-block">
+                            <div class="top-nav">
+                                <ul>
+                                    <li><a href="tel:0123456789"><i class="fa fa-phone"></i> +255783025855</a></li>
+                                    <li><a href="mailto:demo@example.com"><i class="fa fa-envelope-o"></i> leopordk@iphosam.co.tz</a></li>
+                                    <li><a href="my-account.html"><i class="fa fa-user"></i> </a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="copyright">
+            <!-- Header top area end -->
+         
+            <div class="header-nav-area d-none d-lg-block sticky-nav">
+                <div class="row">
+                    <div class="col-lg-4">
+                    <div class="" style="heght: 60px;">
+                            <a style="height:50;width: 50px;" href="index.html"><img style="height:90px;width: 350px;" src="images/lokk.png"  alt="Site Logo"></a>
+                                <!-- <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo" /></a> -->
+                            </div>
+
+                    </div>
+                    <div class="col-lg-8 ">
+                    <div class="header-nav">
+                  
+                        <div class="main-menu position-relative">
+                            
+                      
+                    
+                            
+                            <ul>
+                                
+                                
+                            <li class="dropdown"><a href="{{ route('hom') }}">Home</a>
+                                  
+                                  </li>
+                                  <li><a href="about.html">About</a></li>
+                              
+                                  <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+              
+            </div>
+            <!-- header navigation area end -->
+            <div class="mobile-search-box d-lg-none">
                 <div class="container">
-                    <p>© 2021 All Rights Reserved. Design By  Mike> </a></p>
+                    <!-- mobile search start -->
+                    <div class="search-element max-width-100">
+                        <form action="#">
+                            <input type="text" placeholder="Search" />
+                            <button><i class="pe-7s-search"></i></button>
+                        </form>
+                    </div>
+                    <!-- mobile search start -->
+                </div>
+            </div>
+        </header>
+
+        <div class="section ">
+            <div class="hero-slider swiper-container slider-nav-style-1 slider-dot-style-1">
+                <!-- Hero slider Active -->
+                <div class="swiper-wrapper">
+                    <!-- Single slider item -->
+                    @foreach ($banners as $banner)
+                    <div class="hero-slide-item slider-height-2 swiper-slide bg-color1" data-bg-image="">
+                        <div class="container h-90">
+                            <div class="row h-90 flex-row-reverse">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
+                                    <div class="hero-slide-content hero-slide-content-2 slider-animated-1">
+                                        <h2 class="title-1">{{$banner->name}} <br>
+                                        For Smart Device </h2>
+                                        <span class="price">
+                                            <span class="mini-title">sales</span>
+                                        <span class="amount">-20%</span>
+                                        </span>
+                                        <a href="shop-left-sidebar.html" class="btn btn-primary text-capitalize">Shop All Devices</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-center">
+                                    <div class="show-case">
+                                        <div class="hero-slide-image slider-2">
+                                            <img style="height: 450px;margin-top: 50px;" src="{{ asset('upload/images/banner/'.$banner->image) }}" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                    
+         
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-buttons">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- end footer -->
-    <!-- Javascript files-->
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-     <script src="{{ asset('js/popper.min.js') }}"></script>
-     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-
-    <script src="{{ asset('js/jquery-3.0.0.min.js') }}"></script>
-
-    <script src="{{ asset('js/plugin.js') }}"></script>
+        <!-- Hero/Intro Slider End -->
+        <!-- Banner Area Start -->
   
-    <script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <!-- sidebar -->
- 
-    <script src="{{ asset('js/custom.js') }}"></script>
- 
-    <script src="{{ asset('js/owl.carousel.js') }}"></script>
-    <!-- javascript -->
-    <script src=""></script>
+        <!-- Banner Area End -->
+        <!-- Product Area Start -->
+        <div class="product-area pb-100px">
+            <div class="container">
+                <!-- Section Title & Tab Start -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center">
+                            <h2 class="title">New Products</h2>
+                            <p>There are many variations of passages of Lorem Ipsum available</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section Title & Tab End -->
+                <div class="row">
+                    <div class="col">
+                        <div class="row mb-n-30px">
+                            
    
-    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".fancybox").fancybox({
-                openEffect: "none",
-                closeEffect: "none"
-            });
+                    
+                    @foreach ($products as $product)
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                <!-- Single Prodect -->
+                                <div class="product">
+                                    <span class="badges">
+                                    <span class="sale">-10%</span>
+                                        <span class="new">New</span>
+                                    </span>
+                                    <div class="thumb">
+                                        <a href="{{ route('produs.show',$product->id) }}" class="image">
+                                        <img  src="{{ asset('upload/images/product/'.$product->productimages[0]->name) }}" alt="Product" >
+                                        <img class="hover-image" src="{{ asset('upload/images/product/'.$product->productimages[0]->name) }}" alt="img">
+                                          
+                                        </a>
+                                    </div>
+                                    <div class="content">
 
-            $(".zoom").hover(function() {
+                                        <span class="category"><a href="#">{{$product->subcategory->category->name}}</a></span>
+                                        <h5 class="title"><a href="{{ route('produs.show',$product->id) }}">{{ $product->name }}
+                                            </a>
+                                        </h5>
+                                        <span class="price">
+                                            <span class="new">{{ $product->sale_price}}</span>
+                                        </span>
+                                    </div>
+                                    <div class="actions">
+                                                <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal" data-bs-target="#exampleModal-Cart"><i
+                                                    class="pe-7s-shopbag"></i></button>
+                                                <button class="action wishlist" title="Wishlist" data-bs-toggle="modal" data-bs-target="#exampleModal-Wishlist"><i
+                                                        class="pe-7s-like"></i></button>
+                                                <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-look"></i></button>
+                                                <button class="action compare" title="Compare" data-bs-toggle="modal" data-bs-target="#exampleModal-Compare"><i
+                                                        class="pe-7s-refresh-2"></i></button>
+                                            </div>
+                                </div>
+                            </div>
+                          
+                    @endforeach
+                         
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
 
-                $(this).addClass('transition');
-            }, function() {
+        <!-- Blog area end here -->
+        <!-- Footer Area Start -->
+        <div class="footer-area">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Start single blog -->
+                            <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
+                                
+                            </div>
+                            <!-- End single blog -->
+                            <!-- Start single blog -->
+                            <!-- <div class="col-md-6 col-lg-3 col-sm-6 mb-lm-30px pl-lg-60px">
+                                <div class="single-wedge">
+                                    <h4 class="footer-herading">Services</h4>
+                                    <div class="footer-links">
+                                        <div class="footer-row">
+                                            <ul class="align-items-center">
+                                                <li class="li"><a class="single-link" href="my-account.html"></a></li>
+                                                <li class="li"><a class="single-link" href="contact.html">Contact</a></li>
+                                                <li class="li"><a class="" href="cart.html">Download our apllication </a></li>
+                                        
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        
+                            <!-- End single blog -->
+                            <!-- Start single blog -->
+                            <div class="col-md-6 col-lg-3 col-sm-12">
+                                <div class="single-wedge">
+                                    <h4 class="footer-herading">Contact Info</h4>
+                                    <div class="footer-links">
+                                        <!-- News letter area -->
+                                        <p class="address">Address:Dar es salaam,sky city .</p>
+                                        <p class="phone">Phone/Fax:<a href="tel:0123456789"> +255629555022</a></p>
+                                        <p class="mail">Email:<a href="mailto:demo@example.com"> leopordk@iphosam.co.tz</a></p>
+                                        <p class="mail">Whatsap<a href="">+255783025855</a></p>
+                                        <!-- News letter area  End -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single blog -->
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="line-shape-top line-height-1">
+                            <div class="row flex-md-row-reverse align-items-center">
+                                <div class="col-md-6 text-center text-md-end">
+                                   
+                                </div>
+                                <div class="col-md-6 text-center text-md-start">
+                                    <p class="copy-text"> © 2021 <strong>mike</strong> Made With <i class="fa fa-heart"
+                                        aria-hidden="true"></i> By <a class="company-name" href="">
+                                            <strong>mike </strong></a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Area End -->
+    </div>
 
-                $(this).removeClass('transition');
-            });
-        });
-    </script>
-        
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" >
-      $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
-    
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-      });
-    </script>
+    <!-- Global Vendor, plugins JS -->
+    <!-- JS Files
+    ============================================ -->
+    <!-- <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="assets/js/plugins/jquery.countdown.min.js"></script>
+    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/scrollUp.js"></script>
+    <script src="assets/js/plugins/venobox.min.js"></script>
+    <script src="assets/js/plugins/jquery-ui.min.js"></script>
+    <script src="assets/js/plugins/mailchimp-ajax.js"></script> -->
+
+    <!-- Minify Version -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/js/plugins.min.js') }}"></script>
+    <script src="{{ asset('js/js/vendor.min.js') }}"></script>
+
+    <script src="{{ asset('js/js/main.min.js') }}"></script>
 </body>
-
 </html>
-
-

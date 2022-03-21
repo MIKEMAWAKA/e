@@ -14,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('welcome');IndexController
 // });
 
-Route::get('/',  [App\Http\Controllers\IndexController::class,'index']);
+Route::get('/',  [App\Http\Controllers\IndexController::class,'index'])->name('hom');
+
+Route::get('/show/{id}', [App\Http\Controllers\IndexController::class, 'indexshow'])->name('produs.show');
+// Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
 
 Auth::routes();
@@ -31,6 +34,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
   
 Route::resource('tags', App\Http\Controllers\TagController::class);
+
 
 Route::resource('banners', App\Http\Controllers\BannerController::class);
 
