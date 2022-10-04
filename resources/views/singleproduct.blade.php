@@ -1,431 +1,686 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>IPHOSAM</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="eCommerce HTML Template Free Download" name="keywords">
+        <meta content="eCommerce HTML Template Free Download" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="{{ asset('new/lib/slick/slick.css') }}" />
+        <link rel="stylesheet" href="{{ asset('new/lib/slick/slick-theme.css') }}" />
+
+        <!-- Template Stylesheet -->
+
+        <link rel="stylesheet" href="{{ asset('new/css/style.css') }}" />
+    </head>
+
+    <body>
 
 
-<!-- Mirrored from template.hasthemes.com/hmart/hmart/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 20 Mar 2022 10:36:25 GMT -->
-<head>
-  <!-- basic -->
-  <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- mobile metas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-        <!-- site metas -->
-        <title>IPHOSAM GROUP</title>
-        <meta name="keywords" content="">
-        <meta name="description" content="">
-        <meta name="author" content="">
-    <!-- CSS
-    ============================================ -->
-    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/font.awesome.css" />
-    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css" />
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/venobox.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css"> -->
-    <!-- Style CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
-    <!-- Minify Version -->
-    <link rel="stylesheet" href="{{ asset('css/css/plugins.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/css/style.min.css') }}" />
-  
-</head>
+        <div class="nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-<body>
-    <div class="main-wrapper">
-        <header>
-            <!-- Header top area start -->
-            <div class="header-top" style="color:white">
-                <div class="container">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col">
-                            <div class="welcome-text">
-                                <p>Tanzania ,Dar es salaam,Sky city shopping mall</p>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="{{ route('hom') }}" class="nav-item nav-link active">Home</a>
+                            <a href="{{ route('productList') }}" class="nav-item nav-link">Products</a>
+                            <a href="{{ route('productList') }}" class="nav-item nav-link">All Brands</a>
+                            {{--  <a href="cart.html" class="nav-item nav-link">Cart</a>
+                            <a href="checkout.html" class="nav-item nav-link">Checkout</a>  --}}
+                            <a href="my-account.html" class="nav-item nav-link">My Account</a>
+                            {{--  <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
+                                <div class="dropdown-menu">
+                                    <a href="wishlist.html" class="dropdown-item">Wishlist</a>
+                                    <a href="login.html" class="dropdown-item">Login & Register</a>
+                                    <a href="contact.html" class="dropdown-item">Contact Us</a>
+                                </div>
+                            </div>  --}}
+                        </div>
+                        <div class="navbar-nav ml-auto">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Login</a>
+                                    <a href="#" class="dropdown-item">Register</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col d-none d-lg-block">
-                            <div class="top-nav">
-                                <ul>
-                                    <li><a href="tel:0123456789"><i class="fa fa-phone"></i> +255783025855</a></li>
-                                    <li><a href="mailto:demo@example.com"><i class="fa fa-envelope-o"></i> leopordk@iphosam.co.tz</a></li>
-                                    <li><a href="my-account.html"><i class="fa fa-user"></i> </a></li>
-                                </ul>
-                            </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+        <!-- Bottom Bar Start -->
+        <div class="bottom-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="{{ route('hom') }}">
+                                <img src="{{ asset('new/logo.jpg') }}" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="search">
+                            <input type="text" placeholder="Search">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="user">
+                            <a href="wishlist.html" class="btn wishlist">
+                                <i class="fa fa-heart"></i>
+                                <span>(0)</span>
+                            </a>
+                            <a href="cart.html" class="btn cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>(0)</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Header top area end -->
-         
-            <div class="header-nav-area d-none d-lg-block sticky-nav">
+        </div>
+        <!-- Bottom Bar End -->
+
+        <!-- Product Detail Start -->
+        @foreach ($products as $product)
+        <div class="product-detail">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-4">
-                    <div class="" style="heght: 60px;">
-                            <a style="height:50;width: 50px;" href="{{ route('hom') }}"><img style="height:90px;width: 350px;" src="{{ asset('images/lokk.png') }}"  alt="Site Logo"></a>
-                                <!-- <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo" /></a> -->
+                    <div class="col-lg-8">
+                        <div class="product-detail-top">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <div class="product-slider-single normal-slider">
+                                        <img src="{{asset('new/img/product-1.jpg')   }}" alt="Product Image">
+                                        <img src="{{asset('new/img/product-3.jpg')   }}" alt="Product Image">
+                                        <img src="{{asset('new/img/product-5.jpg')   }}" alt="Product Image">
+                                        <img src="{{asset('new/img/product-7.jpg')   }}" alt="Product Image">
+                                        <img src="{{asset('new/img/product-9.jpg')   }}" alt="Product Image">
+                                        <img src="{{asset('new/img/product-10.jpg')   }}" alt="Product Image">
+                                    </div>
+                                    <div class="product-slider-single-nav normal-slider" style="height: 120px">
+                                        <div class="slider-nav-img"><img src="{{asset('new/img/product-1.jpg')   }}" alt="Product Image"></div>
+                                        <div class="slider-nav-img"><img src="{{asset('new/img/product-3.jpg')   }}" alt="Product Image"></div>
+                                        <div class="slider-nav-img"><img src="{{asset('new/img/product-5.jpg')   }}" alt="Product Image"></div>
+                                        <div class="slider-nav-img"><img src="{{asset('new/img/product-7.jpg')   }}" alt="Product Image"></div>
+                                        <div class="slider-nav-img"><img src="{{asset('new/img/product-9.jpg')   }}" alt="Product Image"></div>
+                                        <div class="slider-nav-img"><img src="{{asset('new/img/product-10.jpg')   }}" alt="Product Image"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="product-content">
+                                        <div class="title"><h2>{{ $product->name }}</h2></div>
+                                        <div class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <div class="price">
+                                            <h4>Price:</h4>
+                                            <p>{{"TZS " . number_format($product->sale_price, 0, ",", ",")  }}</p>
+                                        </div>
+                                        <div class="quantity">
+                                            <h4>Quantity:</h4>
+                                            <div class="qty">
+                                                <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                                <input type="text" value="1">
+                                                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                        {{--  <div class="p-size">
+                                            <h4>Size:</h4>
+                                            <div class="btn-group btn-group-sm">
+                                                <button type="button" class="btn">S</button>
+                                                <button type="button" class="btn">M</button>
+                                                <button type="button" class="btn">L</button>
+                                                <button type="button" class="btn">XL</button>
+                                            </div>
+                                        </div>  --}}
+                                        {{--  <div class="p-color">
+                                            <h4>Color:</h4>
+                                            <div class="btn-group btn-group-sm">
+                                                <button type="button" class="btn">White</button>
+                                                <button type="button" class="btn">Black</button>
+                                                <button type="button" class="btn">Blue</button>
+                                            </div>
+                                        </div>  --}}
+                                        <div class="action">
+                                            <a class="btn" href="#"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
+                                            <a class="btn" href="#"><i class="fa fa-shopping-bag"></i>Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row product-detail-bottom">
+                            <div class="col-lg-12">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="pill" href="#description">Description</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#specification">Specification</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#reviews">Reviews (1)</a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="description" class="container tab-pane active">
+                                        <h4>Product description</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum quam ac mi viverra dictum. In efficitur ipsum diam, at dignissim lorem tempor in. Vivamus tempor hendrerit finibus. Nulla tristique viverra nisl, sit amet bibendum ante suscipit non. Praesent in faucibus tellus, sed gravida lacus. Vivamus eu diam eros. Aliquam et sapien eget arcu rhoncus scelerisque. Suspendisse sit amet neque neque. Praesent suscipit et magna eu iaculis. Donec arcu libero, commodo ac est a, malesuada finibus dolor. Aenean in ex eu velit semper fermentum. In leo dui, aliquet sit amet eleifend sit amet, varius in turpis. Maecenas fermentum ut ligula at consectetur. Nullam et tortor leo.
+                                        </p>
+                                    </div>
+                                    <div id="specification" class="container tab-pane fade">
+                                        <h4>Product specification</h4>
+                                        <ul>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                        </ul>
+                                    </div>
+                                    <div id="reviews" class="container tab-pane fade">
+                                        <div class="reviews-submitted">
+                                            <div class="reviewer">Phasellus Gravida - <span>01 Jan 2020</span></div>
+                                            <div class="ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <p>
+                                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                                            </p>
+                                        </div>
+                                        <div class="reviews-submit">
+                                            <h4>Give your Review:</h4>
+                                            <div class="ratting">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <div class="row form">
+                                                <div class="col-sm-6">
+                                                    <input type="text" placeholder="Name">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="email" placeholder="Email">
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <textarea placeholder="Review"></textarea>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <button>Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="product">
+                            <div class="section-header">
+                                <h1>Related Products</h1>
                             </div>
 
+                            <div class="row align-items-center product-slider product-slider-3">
+                                <div class="col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product-title">
+                                            <a href="#">Product Name</a>
+                                            <div class="ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-image">
+                                            <a href="product-detail.html">
+                                                <img src="img/product-10.jpg" alt="Product Image">
+                                            </a>
+                                            <div class="product-action">
+                                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                                <a href="#"><i class="fa fa-heart"></i></a>
+                                                <a href="#"><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-price">
+                                            <h3><span>$</span>99</h3>
+                                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product-title">
+                                            <a href="#">Product Name</a>
+                                            <div class="ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-image">
+                                            <a href="product-detail.html">
+                                                <img src="img/product-8.jpg" alt="Product Image">
+                                            </a>
+                                            <div class="product-action">
+                                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                                <a href="#"><i class="fa fa-heart"></i></a>
+                                                <a href="#"><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-price">
+                                            <h3><span>$</span>99</h3>
+                                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product-title">
+                                            <a href="#">Product Name</a>
+                                            <div class="ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-image">
+                                            <a href="product-detail.html">
+                                                <img src="img/product-6.jpg" alt="Product Image">
+                                            </a>
+                                            <div class="product-action">
+                                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                                <a href="#"><i class="fa fa-heart"></i></a>
+                                                <a href="#"><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-price">
+                                            <h3><span>$</span>99</h3>
+                                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product-title">
+                                            <a href="#">Product Name</a>
+                                            <div class="ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-image">
+                                            <a href="product-detail.html">
+                                                <img src="img/product-4.jpg" alt="Product Image">
+                                            </a>
+                                            <div class="product-action">
+                                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                                <a href="#"><i class="fa fa-heart"></i></a>
+                                                <a href="#"><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-price">
+                                            <h3><span>$</span>99</h3>
+                                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product-title">
+                                            <a href="#">Product Name</a>
+                                            <div class="ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-image">
+                                            <a href="product-detail.html">
+                                                <img src="img/product-2.jpg" alt="Product Image">
+                                            </a>
+                                            <div class="product-action">
+                                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                                <a href="#"><i class="fa fa-heart"></i></a>
+                                                <a href="#"><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-price">
+                                            <h3><span>$</span>99</h3>
+                                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-8 ">
-                    <div class="header-nav">
-                  
-                        <div class="main-menu position-relative">
-                            
-                      
-                    
-                            
+
+                    <!-- Side Bar Start -->
+                    <div class="col-lg-4 sidebar">
+                        <div class="sidebar-widget category">
+                            <h2 class="title">Category</h2>
+                            <nav class="navbar bg-light">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa fa-female"></i>Fashion & Beauty</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa fa-child"></i>Kids & Babies Clothes</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa fa-tshirt"></i>Men & Women Clothes</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="sidebar-widget widget-slider">
+                            <div class="sidebar-slider normal-slider">
+                                <div class="product-item">
+                                    <div class="product-title">
+                                        <a href="#">Product Name</a>
+                                        <div class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-image">
+                                        <a href="product-detail.html">
+                                            <img src="img/product-7.jpg" alt="Product Image">
+                                        </a>
+                                        <div class="product-action">
+                                            <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                            <a href="#"><i class="fa fa-heart"></i></a>
+                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="product-price">
+                                        <h3><span>$</span>99</h3>
+                                        <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-title">
+                                        <a href="#">Product Name</a>
+                                        <div class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-image">
+                                        <a href="product-detail.html">
+                                            <img src="img/product-8.jpg" alt="Product Image">
+                                        </a>
+                                        <div class="product-action">
+                                            <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                            <a href="#"><i class="fa fa-heart"></i></a>
+                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="product-price">
+                                        <h3><span>$</span>99</h3>
+                                        <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-title">
+                                        <a href="#">Product Name</a>
+                                        <div class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-image">
+                                        <a href="product-detail.html">
+                                            <img src="img/product-9.jpg" alt="Product Image">
+                                        </a>
+                                        <div class="product-action">
+                                            <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                            <a href="#"><i class="fa fa-heart"></i></a>
+                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="product-price">
+                                        <h3><span>$</span>99</h3>
+                                        <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-widget brands">
+                            <h2 class="title">Our Brands</h2>
                             <ul>
-                                
-                                
-                                <li class="dropdown"><a href="{{ route('hom') }}">Home</a>
-                                  
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                            
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="#">Nulla </a><span>(45)</span></li>
+                                <li><a href="#">Curabitur </a><span>(34)</span></li>
+                                <li><a href="#">Nunc </a><span>(67)</span></li>
+                                <li><a href="#">Ullamcorper</a><span>(74)</span></li>
+                                <li><a href="#">Fusce </a><span>(89)</span></li>
+                                <li><a href="#">Sagittis</a><span>(28)</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget tag">
+                            <h2 class="title">Tags Cloud</h2>
+                            <a href="#">Lorem ipsum</a>
+                            <a href="#">Vivamus</a>
+                            <a href="#">Phasellus</a>
+                            <a href="#">pulvinar</a>
+                            <a href="#">Curabitur</a>
+                            <a href="#">Fusce</a>
+                            <a href="#">Sem quis</a>
+                            <a href="#">Mollis metus</a>
+                            <a href="#">Sit amet</a>
+                            <a href="#">Vel posuere</a>
+                            <a href="#">orci luctus</a>
+                            <a href="#">Nam lorem</a>
+                        </div>
+                    </div>
+                    <!-- Side Bar End -->
+                </div>
+            </div>
+        </div>
+
+        @endforeach
+        <!-- Product Detail End -->
+
+
+        <!-- Brand Start -->
+        <div class="brand">
+            <div class="container-fluid">
+                <div class="brand-slider">
+                    @foreach ($subcategories as $category)
+                    <div class="brand-item"><img src="{{ asset('upload/images/subcategory/'.$category->image) }}" alt="">{{ $category->name }}</div>
+
+
+                    @endforeach
+
+
+{{--
+                    <div class="brand-item"><img src="img/brand-2.png" alt=""></div>
+                    <div class="brand-item"><img src="img/brand-3.png" alt=""></div>
+                    <div class="brand-item"><img src="img/brand-4.png" alt=""></div>
+                    <div class="brand-item"><img src="img/brand-5.png" alt=""></div>
+                    <div class="brand-item"><img src="img/brand-6.png" alt=""></div>  --}}
+                </div>
+            </div>
+        </div>
+        <!-- Brand End -->
+
+
+
+
+        <!-- Recent Product End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Get in Touch</h2>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>Office: Dar es salaam,Sky city</p>
+                                <p><i class="fa fa-envelope"></i>Email: leopordk@iphosam.co.tz</p>
+                                <p><i class="fa fa-phone"></i>Phone:+255629555022</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Follow Us</h2>
+                            <div class="contact-info">
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Company Info</h2>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Purchase Info</h2>
+                            <ul>
+                                <li><a href="#">Pyament Policy</a></li>
+                                <li><a href="#">Shipping Policy</a></li>
+                                <li><a href="#">Return Policy</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                </div>
-              
-            </div>
-            <!-- header navigation area end -->
-            <div class="mobile-search-box d-lg-none">
-                <div class="container">
-                    <!-- mobile search start -->
-                    <div class="search-element max-width-100">
-                        <form action="#">
-                            <input type="text" placeholder="Search" />
-                            <button><i class="pe-7s-search"></i></button>
-                        </form>
+                <div class="row payment align-items-center">
+                    <div class="col-md-6">
+                        <div class="payment-method">
+                            <h2>We Accept:</h2>
+                            <img src="{{ asset('new/img/payment-method.png') }}" alt="Payment Method" />
+                        </div>
                     </div>
-                    <!-- mobile search start -->
+                    <div class="col-md-6">
+                        <div class="payment-security">
+                            <h2>Secured By:</h2>
+                            <img src="{{ asset('new/img/godaddy.svg') }}" alt="Payment Security" />
+                            <img src="{{ asset('new/img/norton.svg') }}" alt="Payment Security" />
+                            <img src="{{ asset('new/img/ssl.svg') }}" alt="Payment Security" />
+                        </div>
+                    </div>
                 </div>
             </div>
-        </header>
+        </div>
+        <!-- Footer End -->
 
-     <!-- breadcrumb-area start -->
-     <!-- <div class="breadcrumb-area">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 text-center">
-                        <h2 class="breadcrumb-title">Single Product</h2>
-                      
-                        <ul class="breadcrumb-list">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">Product</li>
-                        </ul>
-                       
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- breadcrumb-area end -->
-        <!-- Product Details Area Start -->
-        <div class="product-details-area pt-100px pb-100px">
-        @foreach ($products as $product)
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
-                        <!-- Swiper -->
-                        <div class="swiper-container zoom-top">
-                            <div class="swiper-wrapper">
-                          
-                               @foreach ($product->productimages as $image)
-                                <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="{{ asset('upload/images/product/'.$image->name) }}" alt="">
-                                    <a class="venobox full-preview" data-gall="myGallery" href="{{ asset('upload/images/product/'.$image->name) }}">
-                                        <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                @endforeach
-
-                              
-                            </div>
-                        </div>
-                        <div class="swiper-container mt-20px zoom-thumbs slider-nav-style-1 small-nav">
-                            <div class="swiper-wrapper">
-                          
-                               @foreach ($product->productimages as $image)
-
-                                <div class="swiper-slide">
-                                    <img class="img-responsive m-auto" src="{{ asset('upload/images/product/'.$image->name) }}" alt="">
-                                </div>
-
-                                @endforeach
-
-                            
-                           
-                            </div>
-                            <!-- Add Arrows -->
-                            <div class="swiper-buttons">
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                        </div>
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; <a href="#">IPHOSAM</a>. All Rights Reserved</p>
                     </div>
-                    <div class="col-lg-6 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
-                        <div class="product-details-content quickview-content ml-25px">
-                            <h2>{{$product->name}}</h2>
-                            <div class="pricing-meta">
-                                <ul class="d-flex">
-                                    <li class="new-price">Tsh{{$product->sale_price}}</li>
-                                </ul>
-                            </div>
-                            <div class="pro-details-rating-wrap">
-                                <div class="rating-product">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <span class="read-review"><a class="reviews" href="#">(5 Customer Review)</a></span>
-                            </div>
-                            <p class="mt-30px">{{$product->shortdescription}}</p>
-                            <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
-                                <span>SKU:</span>
-                                <ul class="d-flex">
-                                    <li>
-                                        <a href="#">Ch-256xl</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
-                                <span>Categories: </span>
-                                <ul class="d-flex">
-                                    <li>
-                                        <a href="#">{{$product->subcategory->name}}, </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">ETC</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
-                                <span>Tags: </span>
-                                <ul class="d-flex">
-                                    <li>
-                                        <a href="#">{{$product->tag->name}}, </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">{{$product->subcategory->category->name}}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pro-details-quality">
-                                <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" />
-                                </div>
-                                <!-- <div class="pro-details-cart">
-                                    <button class="add-cart"> Add To
-                                        Cart</button>
-                                </div> -->
-                                <div class="pro-details-compare-wishlist pro-details-wishlist ">
-                                    <a href=""><i class="pe-7s-like"></i></a>
-                                </div>
-                                <div class="pro-details-compare-wishlist pro-details-wishlist ">
-                                    <a href=""><i class="pe-7s-refresh-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- product details description area start -->
-                        <div class="description-review-wrapper">
-                            <div class="description-review-topbar nav">
-                                <button data-bs-toggle="tab" data-bs-target="#des-details2">Information</button>
-                                <button class="active" data-bs-toggle="tab" data-bs-target="#des-details1">Description</button>
-                                <button data-bs-toggle="tab" data-bs-target="#des-details3">Reviews (02)</button>
-                            </div>
-                            <div class="tab-content description-review-bottom">
-                                <div id="des-details2" class="tab-pane">
-                                    <div class="product-anotherinfo-wrapper text-start">
-                                        <ul>
-                                            <li><span> call us or Whatsap</span>+255783025855</li>
-                                            <li><span>email</span>leopord@iphosam.co.tz</li>
-                                            <li><span>located at</span>Tanzania, Dar es salaaam,Sky City mall</li>
-                                            <li><span>Other Info</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="des-details1" class="tab-pane active">
-                                    <div class="product-description-wrapper">
-                                        <p>
-                                             Download our app to get notified on offa and sales
-                                        </p>
-                                       
-                                    </div>
-                                    <ul>
-                                            <li><span> call us or Whatsap</span>  +255783025855</li>
-                                            <li><span>email</span> leopord@iphosam.co.tz</li>
-                                            <li><span>located at</span> Tanzania, Dar es salaaam,Sky City mall</li>
-                                            <li><span>Other Info</span> </li>
-                                        </ul>
-                                </div>
-                              
-                            </div>
-                        </div>
-                        <!-- product details description area end -->
-                    </div>
-                </div>
-            </div>
-            @endforeach
-                          
-        </div>
-        <!-- Product Area Start -->
-        <!-- <div class="product-area related-product">
-            <div class="container">
-                <!-- Section Title & Tab Start -->
-                <!-- <div class="row">
-                    <div class="col-12">
-                        <div class="section-title text-center m-0">
-                            <h2 class="title">Related Products</h2>
-                            <p></p>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- Section Title & Tab End -->
-                <!-- <div class="row">
-                    <div class="col">
-                        <div class="new-product-slider swiper-container slider-nav-style-1">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                @foreach ($products as $product)
-                                    <div class="product">
-                                        <span class="badges">
-                                        <span class="new">New</span>
-                                        </span>
-                                        <div class="thumb">
-                                            <a href="{{ route('produs.show',$product->id) }}" class="image">
-                                                <img src="{{ asset('upload/images/product/'.$product->productimages[0]->name) }}" alt="Product" />
-                                                <img class="hover-image" src="{{ asset('upload/images/product/'.$product->productimages[0]->name) }}" alt="Product" />
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <span class="category"><a href="#">Accessories</a></span>
-                                            <h5 class="title"><a href="single-product.html">Modern Smart Phone
-                                                </a>
-                                            </h5>
-                                            <span class="price">
-                                            <span class="new">$38.50</span>
-                                            </span>
-                                        </div>
-                                        <div class="actions">
-                                            <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal" data-bs-target="#exampleModal-Cart"><i
-                                                class="pe-7s-shopbag"></i></button>
-                                            <button class="action wishlist" title="Wishlist" data-bs-toggle="modal" data-bs-target="#exampleModal-Wishlist"><i
-                                                    class="pe-7s-like"></i></button>
-                                            <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-look"></i></button>
-                                            <button class="action compare" title="Compare" data-bs-toggle="modal" data-bs-target="#exampleModal-Compare"><i
-                                                    class="pe-7s-refresh-2"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
-                        
-                            </div>
-                             Add Arrows -->
-                            <!-- <div class="swiper-buttons">
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </div> 
-  
 
-        <!-- Blog area end here -->
-        <!-- Footer Area Start -->
-        <div class="footer-area">
-            <div class="footer-container">
-                <div class="footer-top">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Start single blog -->
-                            <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
-                                
-                            </div>
-                            <!-- End single blog -->
-                            <!-- Start single blog -->
-                            <!-- <div class="col-md-6 col-lg-3 col-sm-6 mb-lm-30px pl-lg-60px">
-                                <div class="single-wedge">
-                                    <h4 class="footer-herading">Services</h4>
-                                    <div class="footer-links">
-                                        <div class="footer-row">
-                                            <ul class="align-items-center">
-                                                <li class="li"><a class="single-link" href="my-account.html"></a></li>
-                                                <li class="li"><a class="single-link" href="contact.html">Contact</a></li>
-                                                <li class="li"><a class="" href="cart.html">Download our apllication </a></li>
-                                        
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                        
-                            <!-- End single blog -->
-                            <!-- Start single blog -->
-                            <div class="col-md-6 col-lg-3 col-sm-12">
-                                <div class="single-wedge">
-                                    <h4 class="footer-herading">Contact Info</h4>
-                                    <div class="footer-links">
-                                        <!-- News letter area -->
-                                        <p class="address">Address:Dar es salaam,sky city .</p>
-                                        <p class="phone">Phone/Fax:<a href="tel:0123456789"> +255629555022</a></p>
-                                        <p class="mail">Email:<a href="mailto:demo@example.com"> leopordk@iphosam.co.tz</a></p>
-                                        <p class="mail">Whatsap<a href="">+255783025855</a></p>
-                                        <!-- News letter area  End -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End single blog -->
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="container">
-                        <div class="line-shape-top line-height-1">
-                            <div class="row flex-md-row-reverse align-items-center">
-                                <div class="col-md-6 text-center text-md-end">
-                                   
-                                </div>
-                                <div class="col-md-6 text-center text-md-start">
-                                    <p class="copy-text"> © 2021 <strong>mike</strong> Made With <i class="fa fa-heart"
-                                        aria-hidden="true"></i> By <a class="company-name" href="">
-                                            <strong>mike </strong></a>.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-6 template-by">
+						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <p>Designed By <a href="">Mike</a></p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer Area End -->
-    </div>
+        <!-- Footer Bottom End -->
 
-    <!-- Global Vendor, plugins JS -->
-    <!-- JS Files
-    ============================================ -->
-    <!-- <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
-    <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="assets/js/plugins/jquery.countdown.min.js"></script>
-    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
-    <script src="assets/js/plugins/scrollUp.js"></script>
-    <script src="assets/js/plugins/venobox.min.js"></script>
-    <script src="assets/js/plugins/jquery-ui.min.js"></script>
-    <script src="assets/js/plugins/mailchimp-ajax.js"></script> -->
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-    <!-- Minify Version -->
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/js/plugins.min.js') }}"></script>
-    <script src="{{ asset('js/js/vendor.min.js') }}"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        {{--  <script src="lib/easing/easing.min.js"></script>  --}}
+        {{--  <script src="lib/slick/slick.min.js"></script>  --}}
 
-    <script src="{{ asset('js/js/main.min.js') }}"></script>
-</body>
+        <script src="{{ asset('new/lib/easing/easing.min.js') }}"></script>
+
+        <script src="{{ asset('new/lib/slick/slick.min.js') }}"></script>
+
+        <!-- Template Javascript -->
+
+        <script src="{{ asset('new/js/main.js') }}"></script>
+    </body>
 </html>

@@ -20,15 +20,15 @@ class IndexController extends Controller
         $products=Product::all();
         $banners=Banner::all();
 
-  
+
         $productsphone= Product::where('category_id',4)->get();
         $productshome= Product::where('category_id',5)->get();
         $productsacces= Product::where('category_id',2)->get();
-    
+
 
         $accesories = SubCategory::all();
         $covers = Tag::all();
-        
+
         return view('welcome')
             ->with('categories', $categories)
             ->with('products',$products)
@@ -40,23 +40,51 @@ class IndexController extends Controller
             ->with('tag',$covers);
     }
 
+    public function productList()
+    {
+        $categories= Category::all();
+        $products=Product::all();
+        $banners=Banner::all();
+
+
+        $productsphone= Product::where('category_id',4)->get();
+        $productshome= Product::where('category_id',5)->get();
+        $productsacces= Product::where('category_id',2)->get();
+
+
+        $accesories = SubCategory::all();
+        $covers = Tag::all();
+
+        return view('productList')
+            ->with('categories', $categories)
+            ->with('products',$products)
+            ->with('subcategories',$accesories)
+            ->with('banners',$banners)
+            ->with('productsphone',  $productsphone)
+            ->with('productshome', $productshome)
+            ->with('productsacces', $productsacces)
+            ->with('tag',$covers);
+    }
+
+
+
     public function indexshow($id)
     {
         $categories= Category::all();
         $products=Product::where('id',$id)->get();
         $banners=Banner::all();
 
-  
+
         // $productsphone= Product::where('category_id',4)->get();
         // $productshome= Product::where('category_id',5)->get();
         // $productsacces= Product::where('category_id',2)->get();
 
         // $productscates=Product::where('subcategory_id',$products->subcategory_id)->get();
-    
+
 
         $accesories = SubCategory::all();
         $covers = Tag::all();
-        
+
         return view('singleproduct')
             ->with('categories', $categories)
             ->with('products',$products)

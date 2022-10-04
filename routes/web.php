@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',  [App\Http\Controllers\IndexController::class,'index'])->name('hom');
+Route::get('productList', [App\Http\Controllers\IndexController::class,'productList'])->name('productList');
 
 Route::get('/show/{id}', [App\Http\Controllers\IndexController::class, 'indexshow'])->name('produs.show');
 // Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
@@ -32,7 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-  
+
 Route::resource('tags', App\Http\Controllers\TagController::class);
 
 
