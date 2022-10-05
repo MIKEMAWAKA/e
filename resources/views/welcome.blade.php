@@ -80,10 +80,10 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="search">
-                            <input type="text" placeholder="Search">
+                        <a href="{{ route('productList') }}" class="search">
+                            <input type="text" disabled placeholder="What are you looking ...">
                             <button><i class="fa fa-search"></i></button>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-3">
                         <div class="user">
@@ -188,8 +188,10 @@
             <div class="container-fluid">
                 <div class="brand-slider">
                     @foreach ($subcategories as $category)
-                    <div class="brand-item"><img src="{{ asset('upload/images/subcategory/'.$category->image) }}" alt="">{{ $category->name }}</div>
+                    <a href="{{  route('productListcate.show',[$category->name,$category->id])  }}">
+                        <div  class="brand-item"><img src="{{ asset('upload/images/subcategory/'.$category->image) }}" alt="">{{ $category->name }}</div>
 
+                    </a>
 
                     @endforeach
 
@@ -247,7 +249,7 @@
                                 </div>
                             </div>
                             <div class="product-image">
-                                <a href="{{ route('produs.show',$product->id) }}">
+                                <a href="{{ route('produs.show',[$product->id,$product->subcategory_id]) }}">
                                     <img src="{{ asset('upload/images/product/'.$product->productimages[0]->name) }}" alt="Product Image">
                                 </a>
                                 <div class="product-action">
@@ -258,7 +260,7 @@
                             </div>
                             <div class="product-price">
                                 <h3>{{"TZS " . number_format($product->sale_price, 0, ",", ",")  }}</h3>
-                                <a class="btn" href="{{ route('produs.show',$product->id) }}"><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href="{{ route('produs.show',[$product->id,$product->subcategory_id]) }}"><i class="fa fa-shopping-cart"></i>Buy Now</a>
                             </div>
                         </div>
                     </div>
@@ -298,7 +300,7 @@
                                 </div>
                             </div>
                             <div class="product-image">
-                                <a href="{{ route('produs.show',$product->id) }}">
+                                <a href="{{ route('produs.show',[$product->id,$product->subcategory_id]) }}">
                                     <img src="{{ asset('upload/images/product/'.$product->productimages[0]->name) }}" alt="Product Image">
                                 </a>
                                 <div class="product-action">
@@ -309,7 +311,7 @@
                             </div>
                             <div class="product-price">
                                 <h3>{{"TZS " . number_format($product->sale_price, 0, ",", ",")  }}</h3>
-                                <a class="btn" href="{{ route('produs.show',$product->id) }}"><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href="{{route('produs.show',[$product->id,$product->subcategory_id]) }}"><i class="fa fa-shopping-cart"></i>Buy Now</a>
                             </div>
                         </div>
                     </div>
@@ -345,7 +347,7 @@
                                 </div>
                             </div>
                             <div class="product-image">
-                                <a href="{{ route('produs.show',$product->id) }}">
+                                <a href="{{ route('produs.show',[$product->id,$product->subcategory_id]) }}">
                                     <img src="{{ asset('upload/images/product/'.$product->productimages[0]->name) }}" alt="Product Image">
                                 </a>
                                 <div class="product-action">
@@ -356,7 +358,7 @@
                             </div>
                             <div class="product-price">
                                 <h3>{{"TZS " . number_format($product->sale_price, 0, ",", ",")  }}</h3>
-                                <a class="btn" href="{{ route('produs.show',$product->id) }}"><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href="{{ route('produs.show',[$product->id,$product->subcategory_id]) }}"><i class="fa fa-shopping-cart"></i>Buy Now</a>
                             </div>
                         </div>
                     </div>

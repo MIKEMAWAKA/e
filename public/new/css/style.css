@@ -1059,11 +1059,11 @@ h2 {
 
 .product-detail .product-slider-single-nav {
     margin: 15px 30px 30px 30px;
-    border: 3px double #f6be0b;
+    border: 3px double #f6bf0b6a;
 }
 
 .product-detail .product-slider-single-nav .slider-nav-img {
-    border-right: 1px solid #f6be0b;
+    border-right: 1px solid #f6bf0b32;
     overflow: hidden;
 
 }

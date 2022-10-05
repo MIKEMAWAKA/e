@@ -23,7 +23,6 @@
         <!-- Template Stylesheet -->
 
         <link rel="stylesheet" href="{{ asset('new/css/style.css') }}" />
-        <meta name="csrf-token" content="{{ csrf_token() }}" />
     </head>
 
     <body>
@@ -82,7 +81,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="search">
-                            <input id="myInput"  type="text" placeholder="Search">
+                            <input id="myInput" type="text" placeholder="Search">
                             <button><i class="fa fa-search"></i></button>
                         </div>
                     </div>
@@ -112,6 +111,7 @@
                         <div class="row">
 
                     @foreach ($products as $product)
+
 
 
                     <div class="col-lg-3" id="myTable">
@@ -272,7 +272,7 @@
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
         <!-- JavaScript Libraries -->
-         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         {{--  <script src="lib/easing/easing.min.js"></script>  --}}
         {{--  <script src="lib/slick/slick.min.js"></script>  --}}
@@ -296,6 +296,5 @@
         });
         });
         </script>
-
     </body>
 </html>
