@@ -43,7 +43,7 @@
                             <a href="{{ route('productList') }}" class="nav-item nav-link">All Brands</a>
                             {{--  <a href="cart.html" class="nav-item nav-link">Cart</a>
                             <a href="checkout.html" class="nav-item nav-link">Checkout</a>  --}}
-                            <a href="my-account.html" class="nav-item nav-link">My Account</a>
+                            <a href="" class="nav-item nav-link">My Account</a>
                             {{--  <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
                                 <div class="dropdown-menu">
@@ -57,8 +57,8 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Login</a>
-                                    <a href="#" class="dropdown-item">Register</a>
+                                    {{--  <a href="#" class="dropdown-item">Login</a>
+                                    <a href="#" class="dropdown-item">Register</a>  --}}
                                 </div>
                             </div>
                         </div>
@@ -80,10 +80,10 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="search">
+                        <a href="{{ route('productList') }}" class="search">
                             <input type="text" placeholder="Search">
                             <button><i class="fa fa-search"></i></button>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-3">
                         <div class="user">
@@ -171,8 +171,9 @@
                                             </div>
                                         </div>  --}}
                                         <div class="action">
-                                            <a class="btn" href="#"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
-                                            <a class="btn" href="#"><i class="fa fa-shopping-bag"></i>Buy Now</a>
+                                            <a class="btn" href="{{ route('checkout',$product->id) }}"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
+
+                                            <a class="btn" href=" {{ route('checkout',$product->id) }}"><i class="fa fa-shopping-bag"></i>Buy Now</a>
                                         </div>
                                     </div>
                                 </div>

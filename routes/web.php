@@ -19,6 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',  [App\Http\Controllers\IndexController::class,'index'])->name('hom');
 Route::get('productList', [App\Http\Controllers\IndexController::class,'productList'])->name('productList');
+Route::get('/checkout/{id}', [App\Http\Controllers\IndexController::class,'productcheckout'])->name('checkout');
+
+
+
+Route::post('/ordered', [App\Http\Controllers\IndexController::class,'insert'])->name('ordered');
 
 Route::post('productList/seach', [App\Http\Controllers\IndexController::class,'showProducts'])->name('product.search');
 
@@ -55,3 +60,6 @@ Route::resource('productImages', App\Http\Controllers\ProductImageController::cl
 
 
 Route::resource('users', App\Http\Controllers\UserController::class)->middleware('auth');
+
+
+Route::resource('orders', App\Http\Controllers\OrderController::class);

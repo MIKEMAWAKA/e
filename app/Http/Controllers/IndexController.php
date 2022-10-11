@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Tag;
 use App\Models\Banner;
 use App\Models\SubCategory;
+use DB;
 
 
 
@@ -145,10 +146,10 @@ class IndexController extends Controller
 
     }
 
-    public function productcheckout()
+    public function productcheckout($id)
     {
         $categories= Category::all();
-        $products=Product::all();
+        $products=Product::where('id',$id)->get();
         $banners=Banner::all();
 
 
@@ -170,6 +171,55 @@ class IndexController extends Controller
             ->with('productsacces', $productsacces)
             ->with('tag',$covers);
     }
+
+    public function insertform(){
+        return view('stud_create');
+        }
+
+        // $table->increments('id');
+        // $table->string('name');
+        // $table->string('fname');
+        // $table->string('lname');
+        // $table->string('phone');
+        // $table->string('address');
+        // $table->string('location');
+        // $table->string('city');
+        // $table->string('productname');
+        // $table->string('itemprice');
+        // $table->string('totalprice');
+        // $table->string('product_id');
+        // $table->string('user_id');
+
+    public function insert(Request $request){
+            $first_name = $request->input('fname');
+            $last_name = $request->input('lname');
+            $city_name = $request->input('city');
+            $phone = $request->input('phone');
+            $productname = $request->input('productname');
+            $address = $request->input('address');
+            $location = $request->input('location');
+            $itemprice = $request->input('itemprice');
+            $totalprice = $request->input('totalprice');
+            $user_id = $request->input('user_id');
+            $product_id = $request->input('product_id');
+            // $totalprice = $request->input('totalprice');
+            $data=array('fname'=>$first_name,"lname"=>$last_name,"city"=>$city_name,"productname"=>$productname
+            ,"address"=>$address
+            ,"location"=>$location
+            ,"itemprice"=>$itemprice
+            ,"totalprice"=>$totalprice
+            ,"user_id"=>$user_id
+            ,"phone"=>$phone
+            ,"product_id"=>$product_id,
+
+
+        );
+            DB::table('orders')->insert($data);
+
+   return back()->with('status', 'Success placed your order we will get back to you as soon as possible!');
+            // echo '<a href = "/insert">Click Here</a> to go back.';
+    }
+
 
 
 

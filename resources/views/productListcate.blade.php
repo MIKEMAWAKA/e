@@ -43,7 +43,7 @@
                             <a href="{{ route('productList') }}" class="nav-item nav-link">All Brands</a>
                             {{--  <a href="cart.html" class="nav-item nav-link">Cart</a>
                             <a href="checkout.html" class="nav-item nav-link">Checkout</a>  --}}
-                            <a href="my-account.html" class="nav-item nav-link">My Account</a>
+                            <a href="" class="nav-item nav-link">My Account</a>
                             {{--  <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
                                 <div class="dropdown-menu">
@@ -57,8 +57,8 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Login</a>
-                                    <a href="#" class="dropdown-item">Register</a>
+                                    {{--  <a href="#" class="dropdown-item">Login</a>
+                                    <a href="#" class="dropdown-item">Register</a>  --}}
                                 </div>
                             </div>
                         </div>
@@ -87,14 +87,14 @@
                     </div>
                     <div class="col-md-3">
                         <div class="user">
-                            <a href="wishlist.html" class="btn wishlist">
+                            {{--  <a href="wishlist.html" class="btn wishlist">
                                 <i class="fa fa-heart"></i>
                                 <span>(0)</span>
                             </a>
                             <a href="cart.html" class="btn cart">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span>(0)</span>
-                            </a>
+                            </a>  --}}
                         </div>
                     </div>
                 </div>

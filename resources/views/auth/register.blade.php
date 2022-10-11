@@ -23,7 +23,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card mx-4">
-                <div class="card-body p-4">
+                {{--  <div class="card-body p-4">
                     <form method="post" action="{{ url('/register') }}">
                         @csrf
                         <h1>Register</h1>
@@ -83,7 +83,7 @@
                         <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
                         <a href="{{ url('/login') }}" class="text-center">I already have a membership</a>
                     </form>
-                </div>
+                </div>  --}}
             </div>
         </div>
     </div>

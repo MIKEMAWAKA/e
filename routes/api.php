@@ -35,3 +35,5 @@ Route::resource('sub_categories', SubCategoryAPIController::class);
 Route::resource('products', ProductAPIController::class);
 
 Route::resource('product_images', ProductImageAPIController::class);
+
+Route::resource('orders', App\Http\Controllers\API\OrderAPIController::class);

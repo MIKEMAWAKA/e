@@ -44,7 +44,7 @@
                             <a href="{{ route('productList') }}" class="nav-item nav-link">All Brands</a>
                             {{--  <a href="cart.html" class="nav-item nav-link">Cart</a>
                             <a href="checkout.html" class="nav-item nav-link">Checkout</a>  --}}
-                            <a href="my-account.html" class="nav-item nav-link">My Account</a>
+                            <a href="" class="nav-item nav-link">My Account</a>
                             {{--  <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
                                 <div class="dropdown-menu">
@@ -58,8 +58,8 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Login</a>
-                                    <a href="#" class="dropdown-item">Register</a>
+                                    {{--  <a href="#" class="dropdown-item">Login</a>
+                                    <a href="#" class="dropdown-item">Register</a>  --}}
                                 </div>
                             </div>
                         </div>

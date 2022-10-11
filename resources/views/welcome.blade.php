@@ -43,7 +43,7 @@
                             <a href="{{ route('productList') }}" class="nav-item nav-link">All Brands</a>
                             {{--  <a href="cart.html" class="nav-item nav-link">Cart</a>
                             <a href="checkout.html" class="nav-item nav-link">Checkout</a>  --}}
-                            <a href="my-account.html" class="nav-item nav-link">My Account</a>
+                            <a href="#" class="nav-item nav-link">My Account</a>
                             {{--  <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
                                 <div class="dropdown-menu">
@@ -56,10 +56,10 @@
                         <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
-                                <div class="dropdown-menu">
+                                {{--  <div class="dropdown-menu">
                                     <a href="#" class="dropdown-item">Login</a>
                                     <a href="#" class="dropdown-item">Register</a>
-                                </div>
+                                </div>  --}}
                             </div>
                         </div>
                     </div>
@@ -87,14 +87,14 @@
                     </div>
                     <div class="col-md-3">
                         <div class="user">
-                            <a href="wishlist.html" class="btn wishlist">
+                            {{--  <a href="" class="btn wishlist">
                                 <i class="fa fa-heart"></i>
                                 <span>(0)</span>
                             </a>
-                            <a href="cart.html" class="btn cart">
+                            <a href="" class="btn cart">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span>(0)</span>
-                            </a>
+                            </a>  --}}
                         </div>
                     </div>
                 </div>
@@ -114,20 +114,20 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-shopping-bag"></i>Best Selling</a>
+                                    <a class="nav-link" href="{{ route('productList') }}"><i class="fa fa-shopping-bag"></i>Best Selling</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-plus-square"></i>New Arrivals</a>
+                                    <a class="nav-link" href="{{ route('productList') }}"><i class="fa fa-plus-square"></i>New Arrivals</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
+                                    <a class="nav-link" href="{{ route('productList') }}"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Mobile Phones & Tablets</a>
+                                    <a class="nav-link" href="{{ route('productList') }}"><i class="fa fa-mobile-alt"></i>Mobile Phones & Tablets</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
+                                    <a class="nav-link" href="{{ route('productList') }}"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
                                 </li>
 
                             </ul>
@@ -140,7 +140,7 @@
                                 <img src="{{ asset('upload/images/banner/'.$banner->image) }}" alt="Slider Image" />
                                 <div class="header-slider-caption">
                                     <p>{{$banner->name}} -20 off shop now</p>
-                                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Shop Now</a>
+                                    <a class="btn" href="{{ route('productList') }}"><i class="fa fa-shopping-cart"></i>Shop Now</a>
                                 </div>
                             </div>
 
@@ -166,13 +166,13 @@
                         <div class="header-img">
                             <div class="img-item">
                                 <img src="{{ asset('new/image/sam.jpeg') }}" />
-                                <a class="img-text" href="">
+                                <a class="img-text" href="{{ route('productList') }}">
                                     <p>Samsung Galaxy S22 Ultra 5G on sales -20 Off</p>
                                 </a>
                             </div>
                             <div class="img-item">
                                 <img src="{{ asset('new/image/ss.jpeg') }}" />
-                                <a class="img-text" href="">
+                                <a class="img-text" href="{{ route('productList') }}">
                                     <p>Samsung A73 5G on sales -20 Off</p>
                                 </a>
                             </div>
@@ -421,7 +421,7 @@
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
                                     <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/iphosam_tz/?hl=en"><i class="fab fa-instagram"></i></a>
                                     <a href=""><i class="fab fa-youtube"></i></a>
                                 </div>
                             </div>
