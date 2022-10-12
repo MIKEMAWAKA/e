@@ -31,7 +31,7 @@ class Order extends Model
     use HasFactory;
 
     public $table = 'orders';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -82,22 +82,22 @@ class Order extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required|string|max:191',
-        'fname' => 'required|string|max:191',
-        'lname' => 'required|string|max:191',
-        'phone' => 'required|string|max:191',
-        'address' => 'required|string|max:191',
-        'location' => 'required|string|max:191',
-        'city' => 'required|string|max:191',
-        'productname' => 'required|string|max:191',
-        'itemprice' => 'required|string|max:191',
-        'totalprice' => 'required|string|max:191',
-        'product_id' => 'required|string|max:191',
-        'user_id' => 'required|string|max:191',
+        // 'name' => 'required|string|max:191',
+        // 'fname' => 'required|string|max:191',
+        // 'lname' => 'required|string|max:191',
+        // 'phone' => 'required|string|max:191',
+        // 'address' => 'required|string|max:191',
+        // 'location' => 'required|string|max:191',
+        // 'city' => 'required|string|max:191',
+        // 'productname' => 'required|string|max:191',
+        // 'itemprice' => 'required|string|max:191',
+        // 'totalprice' => 'required|string|max:191',
+        // 'product_id' => 'required|string|max:191',
+        // 'user_id' => 'required|string|max:191',
         'created_at' => 'nullable',
         'updated_at' => 'nullable',
         'deleted_at' => 'nullable'
     ];
 
-    
+
 }
